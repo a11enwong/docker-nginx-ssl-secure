@@ -24,17 +24,17 @@ then
 fi
 
 
-DH="/etc/nginx/external/dh.pem"
+#DH="/etc/nginx/external/dh.pem"
 
-if [ ! -e "$DH" ]
-then
-  echo ">> seems like the first start of nginx"
-  echo ">> doing some preparations..."
-  echo ""
+#if [ ! -e "$DH" ]
+#then
+#  echo ">> seems like the first start of nginx"
+#  echo ">> doing some preparations..."
+#  echo ""
 
-  echo ">> generating $DH with size: $DH_SIZE"
-  openssl dhparam -out "$DH" $DH_SIZE
-fi
+#  echo ">> generating $DH with size: $DH_SIZE"
+#  openssl dhparam -out "$DH" $DH_SIZE
+#fi
 
 if [ ! -e "/etc/nginx/external/cert.pem" ] || [ ! -e "/etc/nginx/external/key.pem" ]
 then
